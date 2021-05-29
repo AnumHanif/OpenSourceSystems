@@ -1,8 +1,8 @@
 <?php
 	$servername = "localhost";
-$DBname = "studentdatabaseoss";
-$username = "mySQLadmin";
-$password = "studentOSS";
+        $DBname = "student_db_oss";
+        $username = "mySQLadmin";
+        $password = "";
 
 
 	if (mysqli_connect_errno()) {
