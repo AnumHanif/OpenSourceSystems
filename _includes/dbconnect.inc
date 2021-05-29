@@ -1,6 +1,9 @@
 <?php
-	//  replace mysqllogin and mysqlpassword with your own
-	$conn = mysqli_connect("localhost", "Student", "OSS", "oss-cw2");
+	$servername = "localhost";
+$DBname = "studentdatabaseoss";
+$username = "mySQLadmin";
+$password = "studentOSS";
+
 
 	if (mysqli_connect_errno()) {
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
