@@ -1,7 +1,7 @@
 <?php
 	$servername = "localhost";
         $DBname = "student_db_oss";
-        $username = "mySQLadmin";
+        $username = "root";
         $password = "";
 
         $conn = new mysqli ($servername, $username, $password, $DBname);
