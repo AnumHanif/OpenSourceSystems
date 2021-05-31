@@ -42,7 +42,7 @@ if (isset($_SESSION['id'])) {
 
    <h2>My Details</h2>
    <form name="frmdetails" action="" method="post">
-   First Name :
+   First Name : 
    <input name="txtfirstname" type="text" value="{$row['firstname']}" /><br/>
    Surname :
    <input name="txtlastname" type="text"  value="{$row['lastname']}" /><br/>

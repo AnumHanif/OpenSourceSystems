@@ -28,15 +28,15 @@ if (isset($_SESSION['id'])) {
       $data['content'] .= "<td> $row[firstname] </td><td> $row[lastname] </td>
       <td> $row[house] </td><td> $row[town] </td><td> $row[county] </td><td> $row[country] </td>
       <td> $row[postcode] </td> </td> ";
-      $data['content'] .= "<td> <input type ='checkbox' name='delrecords[]' value='".$row['studentid']."' </td></tr> </td>";
+      $data['content'] .= "<td> <input type ='checkbox' name='deleterecords[]' value='".$row['studentid']."' </td></tr> </td>";
    }
 
    $data['content'] .= "</table>";
    $data['content'] .= "</br></br></br>";
-   $data['content'] .= '<input type="submit" name="delete" value="Delete Records">';
+   $data['content'] .= '<input type="submit" name="delete" value="Delete Record(s)">';
    $data['content'] .= "</form>";
 
-   if(isset($_POST['delete']))
+   if(isset($_POST['deleterecords']))
    
    {
      $checkboxc = count($_POST['deleterecords']);
@@ -49,7 +49,7 @@ if (isset($_SESSION['id'])) {
 
      }
 
-      echo "<H3>Success: The Selected Record(s) Have Successfully Been Removed</H3>";
+      echo "<H3>The Selected Record(s) Have Successfully Been Removed</H3>";
    }
 
   
