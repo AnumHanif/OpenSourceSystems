@@ -43,3 +43,4 @@ ALTER TABLE `student`
 
 ALTER TABLE `studentmodules`
  ADD PRIMARY KEY (`studentid`,`modulecode`);
+
