@@ -3,13 +3,13 @@ include("_includes/config.inc");
 include("_includes/dbconnect.inc");
 include("_includes/functions.inc");
 
-// check logged in
+
 if (isset($_SESSION['id'])) {
 
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
 
-   // Build SQL statment that selects a student's modules
+   
    $sql = "SELECT studentid,dob,firstname,lastname,house,town,county,country,postcode FROM student;";
 
    $result = mysqli_query($conn,$sql);
@@ -20,7 +20,7 @@ if (isset($_SESSION['id'])) {
    $data['content'] .= "<tr><th>Student ID</th><th>DOB</th><th>First Name</th><th>Last Name</th><th>House</th><th>Town</th>
    <th>County</th><th>Country</th><th>Postcode</th><th>Select</th></tr>";
 
-   // Display the modules within the html table
+  
    while($row = mysqli_fetch_array($result)) 
    
    {
@@ -39,20 +39,20 @@ if (isset($_SESSION['id'])) {
    if(isset($_POST['delete']))
    
    {
-     $checkboxcount = count($_POST['delrecords']);
+     $checkboxc = count($_POST['deleterecords']);
      $i=0;
-     while($i<$checkboxcount)
-     {                                 //count of records to delete
-       $theid = $_POST['delrecords'][$i];
+     while($i<$checkboxc)
+     {                                 
+       $theid = $_POST['deleterecords'][$i];
        mysqli_query($conn, "DELETE FROM student WHERE studentid= '$theid'");
        $i++;
 
      }
 
-      echo "<H3>Success: Data successfully removed</H3>";
+      echo "<H3>Success: The Selected Record(s) Have Successfully Been Removed</H3>";
    }
 
-   // render the template
+  
    echo template("templates/default.php", $data);
 } 
 else 
