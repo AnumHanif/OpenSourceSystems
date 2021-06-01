@@ -20,7 +20,7 @@ if (isset($_SESSION['id'])) {
    $data['content'] .= "<tr><th>Student ID</th><th>DOB</th><th>First Name</th><th>Last Name</th><th>House</th><th>Town</th>
    <th>County</th><th>Country</th><th>Postcode</th><th>Select</th></tr>";
 
-  
+   
    while($row = mysqli_fetch_array($result)) 
    
    {
@@ -36,23 +36,29 @@ if (isset($_SESSION['id'])) {
    $data['content'] .= '<input type="submit" name="delete" value="Delete Record(s)">';
    $data['content'] .= "</form>";
 
-   if(isset($_POST['deleterecords']))
+   if(isset($_POST['delete']))
    
    {
-     $checkboxc = count($_POST['deleterecords']);
-     $i=0;
-     while($i<$checkboxc)
-     {                                 
-       $theid = $_POST['deleterecords'][$i];
+     $CB = count($_POST["deleterecords"]);
+     $del=0;
+     while($del<$CB)
+     {  
+       $theid = $_POST["deleterecords"][$del];
        mysqli_query($conn, "DELETE FROM student WHERE studentid= '$theid'");
-       $i++;
-
+       $del++;
+       echo "<script>alert('Are you sure you want to delete')</script>";
      }
 
-      echo "<H3>The Selected Record(s) Have Successfully Been Removed</H3>";
-   }
+      echo "<script>alert('Selected Record(s) Have Beeen Successfully Deleted')</script>";
+	  echo ("<meta http-equiv='refresh' content='0.5'>");
+   }  
+   ?>
+   
+   
 
-  
+   
+   
+   <?php
    echo template("templates/default.php", $data);
 } 
 else 
