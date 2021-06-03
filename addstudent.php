@@ -12,7 +12,7 @@ if (isset($_SESSION['id'])) {
    echo template("templates/partials/nav.php");
 
    // if the form has been submitted
-   if (isset($_POST['btnAdd'])) {
+   if (isset($_POST['submit'])) {
 
       // build an sql statment to add details
       $sql = "INSERT INTO student set studentid ='" . $_POST['stringstudentid'] . "',";
@@ -96,9 +96,9 @@ echo template("templates/partials/footer.php");
 <form action="" method="post" enctype="multipart/form-data">
   Select an Image to upload:
   <input type="file" name="FileToUpload" id="FileToUpload">
-  <input type="submit" value="Upload Image" name="submit">
+  <input type="submit" value="Upload Image" name="submit";>
  
-  <script>alert('Image Has Beeen Successfully Uploaded')</script>;
+  
   
 </form>
 </body>
