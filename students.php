@@ -11,6 +11,8 @@ if (isset($_SESSION['id'])) {
 
    
    $sql = "SELECT studentid,dob,firstname,lastname,house,town,county,country,postcode FROM student;";
+   
+   
 
    $result = mysqli_query($conn,$sql);
 
