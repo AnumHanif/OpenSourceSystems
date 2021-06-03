@@ -39,23 +39,31 @@ if (isset($_SESSION['id'])) {
       // see http://stackoverflow.com/questions/6924193/what-is-the-use-of-eod-in-php for info
       // also http://stackoverflow.com/questions/8280360/formatting-an-array-value-inside-a-heredoc
       $data['content'] = <<<EOD
-
-   <h2>My Details</h2>
+<br>
+   <h2 class="text-left">My Details</h2>
+   <br>
    <form name="frmdetails" action="" method="post">
    First Name : 
    <input name="txtfirstname" type="text" value="{$row['firstname']}" /><br/>
+   <br>
    Surname :
    <input name="txtlastname" type="text"  value="{$row['lastname']}" /><br/>
+   <br>
    Number and Street :
    <input name="txthouse" type="text"  value="{$row['house']}" /><br/>
+   <br>
    Town :
    <input name="txttown" type="text"  value="{$row['town']}" /><br/>
+   <br>
    County :
    <input name="txtcounty" type="text"  value="{$row['county']}" /><br/>
+   <br>
    Country :
    <input name="txtcountry" type="text"  value="{$row['country']}" /><br/>
+   <br>
    Postcode :
    <input name="txtpostcode" type="text"  value="{$row['postcode']}" /><br/>
+   <br>
    <input type="submit" value="Save" name="submit"/>
    </form>
 
@@ -73,3 +81,22 @@ EOD;
 echo template("templates/partials/footer.php");
 
 ?>
+<html>
+<style>
+
+body
+
+{
+	background-color: grey
+}
+
+
+</style>
+</html>
+
+
+
+
+
+
+
