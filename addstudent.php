@@ -94,8 +94,8 @@ echo template("templates/partials/footer.php");
 <html>
 <body>
 <form action="" method="post" enctype="multipart/form-data">
-  Select image to upload:
-  <input type="file" name="fileToUpload" id="fileToUpload">
+  Select an Image to upload:
+  <input type="file" name="FileToUpload" id="FileToUpload">
   <input type="submit" value="Upload Image" name="submit">
 </form>
 </body>

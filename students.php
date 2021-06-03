@@ -47,7 +47,7 @@ if (isset($_SESSION['id'])) {
      $del=0;
      while($del<$CB)
      {  
-       $theid = $_POST["deleterecords"][$del];
+       $theid = mysqli_real_escape_string($conn,$_POST["deleterecords"][$del]);
        mysqli_query($conn, "DELETE FROM student WHERE studentid= '$theid'");
        $del++;
        echo "<script>alert('Are you sure you want to delete')</script>";
