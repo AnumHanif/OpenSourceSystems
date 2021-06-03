@@ -97,6 +97,9 @@ echo template("templates/partials/footer.php");
   Select an Image to upload:
   <input type="file" name="FileToUpload" id="FileToUpload">
   <input type="submit" value="Upload Image" name="submit">
+ 
+  <script>alert('Image Has Beeen Successfully Uploaded')</script>;
+  
 </form>
 </body>
 <style>

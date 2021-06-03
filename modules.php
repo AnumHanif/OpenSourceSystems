@@ -20,7 +20,7 @@
       // prepare page content
       $data['content'] .= "<table border='2'>";
       $data['content'] .= "<br><h2 class='text-center'>Modules</h2><table class='table table-striped'>";
-      $data['content'] .= "<tr><thead class='thead-dark'>Code</th><th>Type</th><th>Level</th></tr>";
+      $data['content'] .= "<tr><th>Code</th><th>Type</th><th>Level</th></tr>";
       // Display the modules within the html table
       while($row = mysqli_fetch_array($result)) {
          $data['content'] .= "<tr><td> $row[modulecode] </td><td> $row[name] </td>";
